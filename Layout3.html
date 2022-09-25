@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout3</title>
+    <style>
+        body{
+            width:960px;
+            min-height:600px;
+            font-weight:lighter;
+            font-family: sans-serif;
+            margin:20px auto 0 auto;
+            background-color: #EDEDED;
+            display:grid;
+            grid-template-columns:repeat(4, 1fr);
+            grid-template-rows:80px 400px 50px 200px 200px 50px;
+            gap: 20px;
+            grid-template-areas: 
+                "logo .    navi navi"
+				"head head head head"
+                "tit1 .    tit2 ."
+				"blp1 blp1 pro1 pro2"
+				"blp2 blp2 pro3 pro4"
+                "foot foot foot foot"; 
+        }
+        .logo{grid-area: logo;background: silver;}
+        nav{grid-area:navi;align-self: center;}
+        header{grid-area: head;background: silver;padding: 40px;}
+        .title1{grid-area: tit1;}
+        .title2{grid-area: tit2;}
+        .blog1{grid-area: blp1; background: silver;}
+        .product1{grid-area: pro1;background: silver;}
+        .product2{grid-area: pro2;background: silver;}
+        .blog2{grid-area: blp2;background: silver;}
+        .product3{grid-area: pro3;background: silver;}
+        .product4{grid-area: pro4;background: silver;}
+        div{background-color: silver;}
+        footer{grid-area: foot;text-align: center;
+			align-content: center;background: silver;}
+           
+            a {
+            color: black;
+            text-decoration: none;
+            background: silver;
+            }
+        nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			display: grid;
+			height: 50px;
+			grid-template: 25px / repeat(4, 1fr);
+			gap: 20px;
+			justify-items: center;
+			align-content:center;
+            background: silver;
+		}
+        h1 {
+            font-size: 2.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="logo">Company Logo</div>
+    <nav>
+    	<ul>
+        	<li><a href="#">Item 1</a></li>
+        	<li><a href="#">Item 2</a></li>
+        	<li><a href="#">Item 3</a></li>
+        	<li><a href="#">Item 4</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Lorem ipsum dolor sit amet, ne saepe phaedrum cotidieque has, natum zril pro.</h1>
+        <h2>Cu vel aliquid lobortis deseruisse. Nam at adipisci dignissim forensibus. Qui an recteque maluisset assentior, cu ferri aperiam imperdiet sed.</h2>
+    </header>
+    <div class="title1">Title</div>
+    <div class="title2">Title</div>
+
+    <section class="blog1">Blog Post 1</section>
+    <section class="product1">Featured Product 1</section>
+    <section class="product2">Featured Product 2</section>
+
+    <section class="blog2">Blog Post 2</section>
+    <section class="product3">Featured Product 3</section>
+    <section class="product4">Featured Product 4</section>
+
+    <footer>
+        <p>Copyright Notice</p>
+    </footer>
+</body>
+</html>
